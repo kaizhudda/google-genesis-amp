@@ -17,24 +17,64 @@
         ]
       }
     </script>
+    <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async=""></script>
+<script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async=""></script>
+<script custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async=""></script>
+<script custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js" async=""></script>
+<script custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js" async=""></script>
+<script custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js" async=""></script>
+<script custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js" async=""></script>
+<script custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js" async=""></script>
+<script custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js" async=""></script>
+<script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async=""></script>
+<script custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js" async=""></script>
+<script custom-element="amp-fx-flying-carpet" src="https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js" async=""></script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
     </style>
     <noscript>
     <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
     </style>
     </noscript>
+    <style amp-custom>
+    /* any custom style goes here */
+      .row { display: flex; width: 100%; position: absolute; bottom: 0;}
+      .column-1{width: 100%;}
+      .column-3 { width: 33%; flex: 1; text-align: center; flex-direction: column; color: black;}
+      .banner-icon-image {border-radius: 50%; width: 50px; height: 50px}
+      .banner-image{opacity: 0.8;}
+      .button-amp{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 25px; background-color: transparent; border: 2px solid black; color: black; padding: 10px 15px;  }
+      .center-aligned{display: flex; align-items: center; justify-content: center;}
+      .banner-section{position: relative; flex-direction:column; display: flex;}
+      .button-amp{position:absolute; align-items: center; justify-content: center;}
+    </style>
   </head>
   <body>
     <section>
       <h1>Banner</h1>
     </section>
-    <section>
-      <amp-img alt="A beautiful sunset"
+    <section class="banner-section column-1 center-aligned">
+      <amp-img class="banner-image" alt="A beautiful sunset"
         src="images/dad-daughter.png"
         width="100vw"
         height="250">
       </amp-img>
+      <button class="button-amp">Log to My Account</button>
+      <div class="row">
+        <div class="column-3">
+          
+          <p>Join Genesis</p>
+        </div>
+        <div class="column-3">
+           
+          <p>Contact Us</p>
+        </div>
+        <div class="column-3">
+          
+          <p>Move Home</p>
+        </div>
+      </div>
     </section>
+    
     <h1>Welcome to the mobile web</h1>
   </body>
 </html>
