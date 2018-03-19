@@ -24,8 +24,6 @@
 <script custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js" async=""></script>
 <script custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js" async=""></script>
 <script custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js" async=""></script>
-<script custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js" async=""></script>
-<script custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js" async=""></script>
 <script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async=""></script>
 <script custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js" async=""></script>
 <script custom-element="amp-fx-flying-carpet" src="https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js" async=""></script>
@@ -36,13 +34,23 @@
     </style>
     </noscript>
     <style amp-custom>
+      ul {padding: 0; margin: 0;}
+      li {list-style-type: none;}
     /* any custom style goes here */
       .row { display: flex; width: 100%; position: absolute; bottom: 0;}
       .column-1{width: 100%;}
       .column-3 { width: 33%; flex: 1; text-align: center; flex-direction: column; color: black;}
+      .column-3 > p {margin-top: 0;}
+      .amp-footer{background-color: #333; color: white;}
+      .amp-footer-header { color: #eee; padding: 15px; margin: 0;}
+      .amp-footer-nav > ul > li {display: block; padding: 15px; color: #eee;}
+      .sub-menu {width: 100%; overflow: auto; white-space: nowrap; background-color: #F58025; color: white;}
+      .sub-menu > ul {margin: 0; padding: 0;}
+      .sub-menu > ul > li {padding: 0; list-style-type: none; display: inline-block; padding: 15px;}
+      .banner-icons{border-radius: 50%;}
       .banner-icon-image {border-radius: 50%; width: 50px; height: 50px}
       .banner-image{opacity: 0.8;}
-      .button-amp{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 25px; background-color: transparent; border: 2px solid black; color: black; padding: 10px 15px;  }
+      .button-amp{position: absolute; left: 50%; top: 40%; transform: translate(-50%, -50%); border-radius: 25px; background-color: transparent; border: 2px solid black; color: black; padding: 10px 15px;  }
       .center-aligned{display: flex; align-items: center; justify-content: center;}
       .banner-section{position: relative; flex-direction:column; display: flex;}
       .button-amp{position:absolute; align-items: center; justify-content: center;}
@@ -61,20 +69,66 @@
       <button class="button-amp">Log to My Account</button>
       <div class="row">
         <div class="column-3">
-          
+          <amp-img class="banner-icons"
+            src="images/join.png"
+            width="50"
+            height="50">
+          </amp-img>
           <p>Join Genesis</p>
         </div>
         <div class="column-3">
-           
+           <amp-img class="banner-icons"
+            src="images/join.png"
+            width="50"
+            height="50">
+          </amp-img>
           <p>Contact Us</p>
         </div>
         <div class="column-3">
-          
+          <amp-img class="banner-icons"
+            src="images/join.png"
+            width="50"
+            height="50">
+          </amp-img>
           <p>Move Home</p>
         </div>
       </div>
     </section>
-    
-    <h1>Welcome to the mobile web</h1>
+    <section>
+      <div class="sub-menu">
+        <ul>
+          <li>
+            <a>Pay your bill</a>
+          </li>
+          <li>
+            <a>Fly Buys</a>
+          </li>
+          <li>
+            <a>Energy Hub</a>
+          </li>
+          <li>
+            <a>Anchor 1</a>
+          </li>
+          <li>
+            <a>Anchor 2</a>
+          </li>
+          <li>
+            <a>Anchor 3</a>
+          </li>
+        </ul>
+      </div>
+      
+    </section>
   </body>
+  <footer class="amp-footer">
+    <h2 class="amp-footer-header">Footer</h2>
+    <nav class="amp-footer-nav">
+      <ul>
+        <li><a>Contact Us</a></li>
+        <li><a>Accessibility</a></li>
+        <li><a>Terms and Conditions</a></li>
+        <li><a>Privacy Policy</a></li>   
+      </ul>
+    </nav>
+  </footer>
 </html>
