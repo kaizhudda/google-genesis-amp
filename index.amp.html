@@ -24,8 +24,6 @@
 <script custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js" async=""></script>
 <script custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js" async=""></script>
 <script custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js" async=""></script>
-<script custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js" async=""></script>
-<script custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js" async=""></script>
 <script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async=""></script>
 <script custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js" async=""></script>
 <script custom-element="amp-fx-flying-carpet" src="https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js" async=""></script>
@@ -36,21 +34,38 @@
     </style>
     </noscript>
     <style amp-custom>
+      ul {padding: 0; margin: 0;}
+      li {list-style-type: none;}
     /* any custom style goes here */
       .row { display: flex; width: 100%; position: absolute; bottom: 0;}
       .column-1{width: 100%;}
       .column-3 { width: 33%; flex: 1; text-align: center; flex-direction: column; color: black;}
+      .column-3 > p {margin-top: 0;}
+      .amp-footer{background-color: #333; color: white;}
+      .amp-footer-header { color: #eee; padding: 15px; margin: 0;}
+      .amp-footer-nav > ul > li {display: block; padding: 15px; color: #eee;}
+      .sub-menu {width: 100%; overflow: auto; white-space: nowrap; background-color: #F58025; color: white;}
+      .sub-menu > ul {margin: 0; padding: 0;}
+      .sub-menu > ul > li {padding: 0; list-style-type: none; display: inline-block; padding: 15px;}
+      .banner-icons{border-radius: 50%;}
       .banner-icon-image {border-radius: 50%; width: 50px; height: 50px}
       .banner-image{opacity: 0.8;}
-      .button-amp{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 25px; background-color: transparent; border: 2px solid black; color: black; padding: 10px 15px;  }
+      .button-amp{position: absolute; left: 50%; top: 40%; transform: translate(-50%, -50%); border-radius: 25px; background-color: transparent; border: 2px solid black; color: black; padding: 10px 15px;  }
       .center-aligned{display: flex; align-items: center; justify-content: center;}
       .banner-section{position: relative; flex-direction:column; display: flex;}
       .button-amp{position:absolute; align-items: center; justify-content: center;}
       .card{padding: 40px 20px;}
       .grey {background-color: #f4f4f4;}
       .heading-1 {font-size: 22px; font-weight: bold; letter-spacing: 1px; color: #333; margin-top: 0px;}
-      .paragraph {font-size: 18px; color: #4a4a4a; margin-bottom: 0px}
-      .hyperlink {text-decoration: none;}
+      .subheading-1 {font-size: 20px; font-weight: bold; letter-spacing: 1px; color: #333;}
+      .paragraph {font-size: 18px; color: #4a4a4a;}
+      .hyperlink {text-decoration: none; color: #f48025;}
+      .button-1 {font-size: 18px; border-radius: 25px; background-color: #f48025; color: white; padding: 15px 30px; border: none; display: inline-block;}
+      .button-2 {font-size: 18px; border-radius: 25px; background-color: transparent; color: white; padding: 15px 30px; border: 2px solid white; display: inline-block;}      
+      .center-items {display: flex; flex-direction: column;}
+      .center {align-self: center;}
+      .orange {background: linear-gradient(141deg, #f26526 0%, #f26526 51%, #f58025 75%);}
+      .text-white {color: white !important;}
     </style>
   </head>
   <body>
@@ -66,50 +81,106 @@
       <button class="button-amp">Log to My Account</button>
       <div class="row">
         <div class="column-3">
-          
+          <amp-img class="banner-icons"
+            src="images/join.png"
+            width="50"
+            height="50">
+          </amp-img>
           <p>Join Genesis</p>
         </div>
         <div class="column-3">
-           
+           <amp-img class="banner-icons"
+            src="images/join.png"
+            width="50"
+            height="50">
+          </amp-img>
           <p>Contact Us</p>
         </div>
         <div class="column-3">
-          
+          <amp-img class="banner-icons"
+            src="images/join.png"
+            width="50"
+            height="50">
+          </amp-img>
           <p>Move Home</p>
         </div>
       </div>
     </section>
-    
+    <section> 
+      <div class="sub-menu">
+        <ul>
+          <li>
+            <a>Pay your bill</a>
+          </li>
+          <li>
+            <a>Fly Buys</a>
+          </li>
+          <li>
+            <a>Energy Hub</a>
+          </li>
+          <li>
+            <a>Anchor 1</a>
+          </li>
+          <li>
+            <a>Anchor 2</a>
+          </li>
+          <li>
+            <a>Anchor 3</a>
+          </li>
+        </ul>
+    </div>
+      
+    </section>
 
-    <section class="card grey">
-    <h1 class="heading-1">Anchor 5</h1>      
+    <section class="card center-items">
+    <h1 class="heading-1">Anchor 4</h1>      
     <p class="paragraph">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Suspendisse id blandit nulla, maximus aliquam nisl. 
-        Aliquam consequat suscipit risus convallis pharetra. 
-        Maecenas at nulla pretium, rutrum erat pharetra, tempor urna. 
+        Suspendisse id blandit nulla, maximus aliquam nisl.  
     </p>
-    <a href="#" class="hyperlink"> Lorem ipsum dolor </a>
+    <button class="button-1 center">Click here</button>
+    </section>
+    <section class="card grey center-items">
+        <h1 class="heading-1">Anchor 5</h1>      
+        <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Suspendisse id blandit nulla, maximus aliquam nisl. 
+        </p>
+        <amp-img class="banner-icons center"
+          src="images/join.png"
+          width="100"
+          height="100">
+        </amp-img>
     </section>
     <section class="card">
-        <h1 class="heading-1">Anchor 5</h1>      
+        <h1 class="heading-1">Anchor 6</h1>      
         <p class="paragraph">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Suspendisse id blandit nulla, maximus aliquam nisl. 
-            Aliquam consequat suscipit risus convallis pharetra. 
+            Aliquam consequat suscipit risus <a href="" class="hyperlink">convallis pharetra.</a> 
             Maecenas at nulla pretium, rutrum erat pharetra, tempor urna. 
         </p>
-        <a href="#" class="hyperlink"> Lorem ipsum dolor </a>
-    </section>
-    <section class="card grey">
-        <h1 class="heading-1">Anchor 5</h1>      
-        <p class="paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Suspendisse id blandit nulla, maximus aliquam nisl. 
-            Aliquam consequat suscipit risus convallis pharetra. 
-            Maecenas at nulla pretium, rutrum erat pharetra, tempor urna. 
-        </p>
-        <a href="#" class="hyperlink"> Lorem ipsum dolor </a>
-    </section>
+        <a href="#" class="hyperlink"> Lorem ipsum dolor > </a>
+      </section>
+      <section class="card orange center-items">
+          <h1 class="heading-1 text-white">Anchor 7</h1>      
+          <p class="paragraph text-white">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Suspendisse id blandit nulla.
+          </p>
+          <button class="button-2 center">Login to My Account</button>
+          <h1 class="subheading-1 text-white">Something something</h1>
+      </section>
   </body>
+  <footer class="amp-footer">
+    <h2 class="amp-footer-header">Footer</h2>
+    <nav class="amp-footer-nav">
+      <ul>
+        <li><a>Contact Us</a></li>
+        <li><a>Accessibility</a></li>
+        <li><a>Terms and Conditions</a></li>
+        <li><a>Privacy Policy</a></li>   
+      </ul>
+    </nav>
+  </footer>
 </html>
