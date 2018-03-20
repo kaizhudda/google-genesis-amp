@@ -17,6 +17,7 @@
         ]
       }
     </script>
+    <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
     <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async=""></script>
     <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async=""></script>
     <script custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async=""></script>
@@ -46,6 +47,16 @@
         font-family: "Circular Std Medium";
         src: url("fonts/CircularStd-Medium.woff");
       }
+      amp-accordion section[expanded] .show-more {
+        display: none;
+      }
+      amp-accordion section:not([expanded]) .show-less {
+        display: none;
+      }
+      
+      amp-accordion section[expanded] h4 {
+        background-color: #eee;
+      }
       ul {padding: 0; margin: 0;}
       li {list-style-type: none;}
     /* any custom style goes here */
@@ -53,18 +64,17 @@
       .column-1{width: 100%;}
       .column-2{flex: 1;}
       .column-3 { width: 33%; flex: 1; text-align: center; flex-direction: column; color: black;}
-      .column-3 > p {margin-top: 0; font-family: Circular Std Book;}
+      .column-3 > p {margin-top: 0; font-family: Circular Std Book; color: white;}
       .amp-footer{background-color: #333; color: white; font-family: Circular Std Book;}
       .amp-footer-header { color: #eee; padding: 15px; margin: 0;}
       .amp-footer-nav > ul > li {display: block; padding: 10px 15px; color: grey;}
-      .sub-menu {width: 100%; overflow: auto; white-space: nowrap; background-color: #F58025; color: white;}
-      .sub-menu > ul {margin: 0; padding: 0;}
+      .sub-menu {height: 75px; display: flex; width: 100%; overflow: auto; white-space: nowrap; background: linear-gradient(to right,#F58025,#F26526);; color: white;}
+      .sub-menu > ul {margin: 0; padding: 0; align-self: center;}
       .sub-menu > ul > li {padding: 0; list-style-type: none; display: inline-block; padding: 15px; font-family: Circular Std Book;}
-      .banner-icons{border-radius: 50%;}
       .banner-icon-image {border-radius: 50%; width: 50px; height: 50px}
       .banner-image{opacity: 0.8;}
       .text-orange{color: #F58025;}
-      .button-amp{font-family: Circular Std Book; position: absolute; left: 50%; top: 40%; transform: translate(-50%, -50%); border-radius: 25px; background-color: transparent; border: 2px solid black; color: black; padding: 10px 15px;  }
+      .button-amp{font-family: Circular Std Book; position: absolute; left: 50%; top: 40%; transform: translate(-50%, -50%); border-radius: 25px; background-color: transparent; border: 2px solid white; color: white; padding: 10px 15px;  }
       .button-white{font-family: Circular Std Book; margin: 0 auto; border-radius: 25px; border: 2px solid white; color: white; background-color: transparent; padding: 15px;}
       .center-aligned{display: flex; align-items: center; justify-content: center;}
       .banner-section{position: relative; flex-direction:column; display: flex;}
@@ -72,16 +82,31 @@
       .bottom-footer{margin-left: 15px}
       .social-media-icons{display: inline-block; padding-left: 20px;}.social-media-icons > ul > li {display: inline-block; padding: 10px;}
       .registration{padding: 0; padding-left: 15px; margin: 0;}
-      .card {padding: 15px; font-family: Circular Std Book; word-break: break-all;}.card > div > h2 { font-family: Circular Std Bold; font-size: 28px; margin-bottom: 0;}
-      .card > div {display: flex; flex-direction: column;}
+      .card {padding: 15px; font-family: Circular Std Book; word-break: break-word;}.card > div > h2 { font-family: Circular Std Bold; font-size: 28px; margin: 0;}
+      .card > .innercard {display: flex; flex-direction: column;}
       .card-orange{background: linear-gradient(to right,#F58025,#F26526); color: white;}
+      .card-white{border-radius: 5px; color: black; background-color: white; margin: 10px 0px; }
       .card-grey{background-color: #eee;}
       .profile-image{margin: 0 auto;}
       .flex{display: flex; text-align: center;}
-      .rowdirection{flex-direction: row;}
-      header{border-bottom: 1px solid #eee; margin-bottom: 10px;}
+      .rowdirection{flex-direction: row; display: flex;}
+      header{border-bottom: 1px solid #eee;}
+      .header-logo{margin-left: 15px;}
       .hamburger{display: inline-block; float: right; padding: 15px;}
-      .genesis-button-original{padding: 15px; background-color: #f58025; color: white; text-align: center; border-radius: 25px; border: 0; margin: 0 auto;}
+      .genesis-accordian{margin: 0 -15px; background-color: white; }
+      .genesis-accordian > section {background-color: white; }
+      .genesis-accordian > section > h4 {background-color: white; color: #333; font-family: Circular Std Book; padding: 14px; border-top: 1px solid #eee; border-bottom: 0}
+      .genesis-accordian > section[expended] {background-color: red;}
+      .genesis-accordian > section > p{padding: 5px 15px;}
+      .genesis-flybuys {margin-top: -30px;}
+      .genesis-flybuys ~ p {margin-top: 0;}
+      .energyhub-image{max-width: 100%;}
+      .schoolgen-image{max-width: 100%;}
+
+      .myac-p{display: inline-block; padding-left: 15px; font-family: Circular Std Medium; font-size: 18px;}
+      .movinghouse-p{font-family: Circular Std Book; font-size: 18px;}
+      .circular-icon-background{ margin: 0 auto;background-color: #F58025;border-radius: 50%;width: fit-content;padding: 8px 10px;}
+      .genesis-button-original{font-family: Circular Std Medium; font-size: 16px;padding: 15px; background-color: #f58025; color: white; text-align: center; border-radius: 25px; border: 0; margin: 0 auto;}
     </style>
   </head>
   <body>
@@ -89,41 +114,47 @@
       <div class="hamburger" role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger md-hide lg-hide pr2  ">☰
       </div>
       <amp-img class="header-logo"
-        width="65"
+        width="60"
         height="50"
         src="images/logo.png">
       </amp-img>
     </header>
     <section class="banner-section column-1 center-aligned">
       <amp-img class="banner-image" alt="A beautiful sunset"
-        src="images/dad-daughter.png"
+        src="assets/background-image.jpg"
         width="100vw"
         height="250">
       </amp-img>
       <button class="button-amp">Log to My Account</button>
       <div class="row">
         <div class="column-3">
-          <amp-img class="banner-icons"
-            src="images/join.png"
-            width="50"
-            height="50">
-          </amp-img>
+          <div class="circular-icon-background">
+            <amp-img class="banner-icons"
+              src="assets/joinus.svg"
+              width="35"
+              height="35">
+            </amp-img>
+          </div>
           <p>Join Genesis</p>
         </div>
         <div class="column-3">
+        <div class="circular-icon-background">
            <amp-img class="banner-icons"
-            src="images/join.png"
-            width="50"
-            height="50">
+            src="assets/contactus.svg"
+            width="35"
+            height="35">
           </amp-img>
+        </div>
           <p>Contact Us</p>
         </div>
         <div class="column-3">
-          <amp-img class="banner-icons"
-            src="images/join.png"
-            width="50"
-            height="50">
-          </amp-img>
+          <div class="circular-icon-background">
+            <amp-img class="banner-icons"
+              src="assets/movinghome.svg"
+              width="35"
+              height="35">
+            </amp-img>
+          </div>
           <p>Move Home</p>
         </div>
       </div>
@@ -154,75 +185,150 @@
     </section>
     <section>
       <div class="card">
-        <div>
+        <div class="innercard">
           <h2>Pay your bill</h2>
-          <p>sadsadjlsakdjalsdjlasdjlasjdlasjdlajdlsajlsadsadasadasdsadsadsadasddkja</p>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="card">
-        <div>
-          <h2>Energy Hub</h2>
-          <p>sadsadjlsakdjalsdjlasdjlasjdlasjdlajdlsajlsadsadasadasdsadsadsadasddkja</p>
-        </div>
-        <div class="card card-grey">
-          <h3>asdasdasdasjdaksjd</h3>
-          <p>asdkjasdhjsakdhasjdhjaskdhasdsad</p>
-          <div class="flex rowdirection">
-            <div class="column-2">
-              <p>sadasdasda</p>
-              <p class="text-orange">sadasdasd</p>
-            </div>
-            <div class="column-2">
-              <p>sadasdasda</p>
-              <p class="text-orange">sadasdasd</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="card">
-        <div>
-          <h2>Anchor 4</h2>
-          <p>sadsadjlsakdjalsdjlasdjlasjdlasjdlajdlsajlsadsadasadasdsadsadsadasddkja</p>
-          <button class="genesis-button-original">asdsadsa</button>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="card card-grey">
-        <div>
-          <h2>Anchor 5</h2>
-          <p>sadsadjlsakdjalsdjlasdjlasjdlasjdlajdlsadasdasdjasljdalsdlasajldkja</p>
-          
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="card">
-        <div>
-          <h2>Anchor 6</h2>
-          <p>sadsadjlsakdjalsdjlasdjlasjdlasjdlajajdsjdlsdjsdjdlsajldkja</p>
-          <amp-img class="profile-image"
-            width="100"
-            height="100"
-            src="images/contact-us.png">
-          </amp-img>
+          <p>Pay your power bills online whenever and wherever you like. Ensure you receive your prompt payment discount by paying on time.</p>
+          <amp-accordion class="genesis-accordian">
+            <section>
+              <h4>Pay Via My Account</h4>
+              <p>View and pay your power bill using Credit/Debit Card, Direct Debit or Automatic Payment via My Account.</p>
+            </section>
+            <section>
+              <h4>Pay via Mobile App</h4>
+              <p>View and pay your power bill using your Credit/Debit Card via the new Genesis Energy Mobile App</p>
+            </section>
+            <section>
+              <h4>Payment Plan With Control-a-bill</h4>
+              <p>We know that changing seasons and other factors can mean that your energy usage can be a bit all over the place.
+
+That's why we've come up with Control-a-bill, a convenient way to pay that lets you spread your energy payments out evenly, so you pay the same amount on each bill, helping you budget better and take control of your energy payments.</p>
+            </section>
+            <section>
+              <h4>Pay Via Internet Banking</h4>
+              <p>Internet banking allows you to make the payment when it suits you - any time on or before the due date.</p>
+            </section>
+            <section>
+              <h4>Pay Over The Phone</h4>
+              <p>To pay over the phone with your card, call us on 0800 436 100.*</p>
+            </section>
+            <section>
+              <h4>NZ Post</h4>
+              <p>Take your bill to any NZ Post outlet to pay by cash, cheque or EFTPOS^. Want to find out where your nearest NZ Post Shop is? Use the Post Shop Locator.</p>
+            </section>
+          </amp-accordion>
         </div>
       </div>
     </section>
     <section>
       <div class="card card-orange">
-        <div>
-          <h2>Anchor 7</h2>
-          <p>asdjasdksajdkasdkasdksajdksadbsadsadasdasdsadsadsadsaaksdbks</p>
+        <div class="innercard">
+          <h2>Moving House?</h2>
+          <p class="movinghouse-p">Move online with Genesis and get your choice of future-facing tech.</p>
+          <div class="card card-white">
+            Moving home checklist
+          </div>
+          <div class="card card-white">
+            Survival tips for moving house with kids
+          </div>
+          <div class="card card-white">
+            Cost of moving house
+          </div>
+          <button class="button-white">Start moving</button>
+
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="card">
+        <div class="innercard">
+          <amp-img class="genesis-flybuys"
+            width="100"
+            height="100"
+            src="assets/Fly_buys_logo.svg.svg"
+            alt="flybuys icons">
+          </amp-img>
+          <p>Join Genesis and start earaning points.</p>
+          <button class="genesis-button-original">Join flybuys now!</button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="card card-grey">
+        <div class="innercard">
+          <h2>Energy Hub</h2>
+          <p>A conveniently useful guide to help Kiwis make sense of products promising to make our lives easier. </p>
+          <amp-img class="energyhub-image"
+            width="100vh"
+            height="200"
+            src="assets/energyhub.jpg"
+            alt="energyhub image">
+          </amp-img>
+          <br />
+          <button class="genesis-button-original">Checkout Energy Hub!</button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="card">
+        <div class="innercard">
+          <h2>School-gen</h2>
+          <p>We’re putting our energy into School-gen, providing education and inspiration for students, teachers and their families nationwide.</p>
+          <amp-img class="schoolgen-image"
+            width="100vh"
+            height="200"
+            src="assets/schoolgen.jpg"
+            alt="schoolgen image">
+          </amp-img>
+          <br />
+          <button class="genesis-button-original">Checkout School-gen!</button>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <div class="card card-orange">
+        <div class="innercard">
+          <h2>My Account</h2>
+          <p class="movinghouse-p">Stay in control and manage your energy account with the new look My Account.</p>
           <button class="button-white">Log in to My Account</button>
         </div>
-        <div>
-          <h3>asdadas</h3>
+        <div class="card card-white rowdirection">
+          <amp-img class="myac-electricity"
+            width="50"
+            height="50"
+            src="assets/electricity.svg"
+            alt="electricity">
+          </amp-img>
+          <p class="myac-p">Track your electricity usage!</p>
         </div>
+        <div class="card card-white rowdirection">
+          <amp-img class="myac-electricity"
+            width="50"
+            height="50"
+            src="assets/solar.svg"
+            alt="electricity">
+          </amp-img>
+          <p class="myac-p">Check your solar usage!</p>
+        </div>
+        <div class="card card-white rowdirection">
+          <amp-img class="myac-electricity"
+            width="50"
+            height="50"
+            src="assets/lpg.svg"
+            alt="electricity">
+          </amp-img>
+          <p class="myac-p">Re-order your lpg bottles!</p>
+        </div>
+        <div class="card card-white rowdirection">
+          <amp-img class="myac-electricity"
+            width="50"
+            height="50"
+            src="assets/gas.svg"
+            alt="electricity">
+          </amp-img>
+          <p class="myac-p">Check your gas usage!</p>
+        </div>
+        
       </div>
     </div>
       
