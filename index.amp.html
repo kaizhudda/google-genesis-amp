@@ -162,7 +162,7 @@
   </head>
   <body>
     <header>
-      <div class="hamburger" on="tap:sidebar.toggle" class="ampstart-btn caps m2"   >☰
+      <div class="hamburger" on="tap:sidebar.toggle" class="ampstart-btn caps m2" tabindex="0" role="button">☰
       </div>
       <amp-img class="header-logo"
         width="60"
@@ -178,7 +178,7 @@
       </amp-img>
       <button class="button-amp">Log to My Account</button>
       <div class="row">
-        <div class="column-3" onclick="window.location.href='https://join.genesisenergy.co.nz/'">
+        <div class="column-3">
           <div class="circular-icon-background">
             <amp-img class="banner-icons"
               src="assets/joinus.svg"
@@ -466,44 +466,87 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
           <h4>Residential<span class="arrow-span">v</span></h4>
           <amp-accordion class="sidebar-accordian-nested">
             <section>
-              <h4>Electricity</h4>
-              <p>
-                Residential
-              </p>
+              <h4>Products</h4>
+              <ul>
+                <li><a href="http://www.genesisenergy.co.nz/electricity">Electricity</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/bottled-gas">Bottled Gas</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/natural-gas">Natural Gas</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/solar">Solar</a></li>
+              </ul>
             </section>
             <section>
-              <h4>Bottled Gas</h4>
-              <p>
-                Residential
-              </p>
+              <h4>Offers</h4>
+              <ul>
+                <li><a href="http://www.genesisenergy.co.nz/get-flybuys">Flybuys</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/electricity/offers">Electricity</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/bottled-gas/offers">Bottled Gas</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/natural-gas/offers">Natural Gas</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/energy-your-way">Recommend a plan</a></li>
+              </ul>
             </section>
             <section>
-              <h4>Natural Gas</h4>
-              <p>
-                Residential
-              </p>
+              <h4>Services</h4>
+              <ul>
+                <li><a href="http://www.genesisenergy.co.nz/moving-house">Moving House</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/services/my-acount">My Account</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/billing-and-payments">Billing & Payments</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/services/metering">Metering</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/plans-and-pricing">Plans & Pricing</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/services/trusted-trades">Trusted Trades</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/services/usage-reports">Usage Reports</a></li>
+              </ul>
             </section>
-            <section>
-              <h4>Solar</h4>
-              <p>
-                Residential
-              </p>
-            </section>
+            
           </amp-accordion>    
         </section>
         <section>
           <h4>Business<span class="arrow-span">v</span></h4>
-          <ul>
-            <li>Account Management</li>
-            <li>Services</li>
-          </ul>        
+          <amp-accordion class="sidebar-accordian-nested">
+            <section>
+              <h4>Account Management</h4>
+              <ul>
+                <li><a href="http://myaccount.genesisenergy.co.nz/login">My Account</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/services/billing-and-payment">Billing & Payments</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/moving-premises">Moving Business</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/services/meters">Metering</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/energy-tips">Energy Tips</a></li>
+              </ul>
+            </section>
+            <section>
+              <h4>Services</h4>
+              <ul>
+                <li><a href="http://signup.genesisenergy.co.nz/for-business">Request a quote</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/bottled-gas">LPG Refill Request</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/contact-sales">Contact Sales</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/services/smart-monitoring">Smart Monitoring</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/EIEP-agents">EIEP Agents</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/trade-connections">New Construction</a></li>
+              </ul>
+            </section>
+          </amp-accordion>    
         </section>
         <section>
           <h4>Rural<span class="arrow-span">v</span></h4>
-          <ul>
-            <li>Offers</li>
-            <li>Services</li>
-          </ul>        
+          <amp-accordion class="sidebar-accordian-nested">
+            <section>
+              <h4>Offers</h4>
+              <ul>
+                <li><a href="http://www.genesisenergy.co.nz/rural/offers/farmhouse">Farm House</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/rural/offers/farmlands-offer">Farmlands</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/rural/offers/ruralco">Ruralco</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/for-business">Request a quote</a></li>
+              </ul>
+            </section>
+            <section>
+              <h4>Services</h4>
+              <ul>
+                <li><a href="http://myaccount.genesisenergy.co.nz/login">My Account</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/rural/services/meters">Metering</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/contact-sales">Contact Sales</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/rural/pricing-plans">Pricing & Plans</a></li>
+              </ul>
+            </section>
+          </amp-accordion>    
         </section>
         <section>
           <h4>About Us<span class="arrow-span">v</span></h4>
