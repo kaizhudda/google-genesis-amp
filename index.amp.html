@@ -140,6 +140,7 @@
       .card-white{border-radius: 5px; color: black; background-color: white; margin: 10px 0px; }
       .card-grey{background-color: #eee;}
       .profile-image{margin: 0 auto;}
+      .centerthings{margin: 0 auto;}
       .flex{display: flex; text-align: center;}
       .rowdirection{flex-direction: row; display: flex;}
       header{border-bottom: 1px solid #eee; position: fixed; background-color: white; right: 0; left: 0; z-index: 111;}
@@ -164,7 +165,7 @@
   </head>
   <body>
     <header>
-      <div class="hamburger" on="tap:sidebar.toggle" class="ampstart-btn caps m2" tabindex="0" role="button">☰
+      <div on="tap:sidebar.toggle" class="hamburger ampstart-btn caps m2" tabindex="0" role="button">☰
       </div>
       
       <amp-img class="header-logo"
@@ -305,7 +306,7 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
           <div class="card card-white">
             Cost of moving house
           </div>
-          <a href="https://www.genesisenergy.co.nz/get-flybuys">
+          <a class="centerthings" href="https://www.genesisenergy.co.nz/get-flybuys">
             <button id="flybuys" class="button-white">Start moving</button>
           </a>
         </div>
@@ -321,7 +322,7 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
             alt="flybuys icons">
           </amp-img>
           <p>Join Genesis and start earaning points.</p>
-          <a href="https://www.genesisenergyhub.co.nz">
+          <a class="centerthings" href="https://www.genesisenergyhub.co.nz">
             <button id="energy-hub" class="genesis-button-original">Join flybuys now!</button>
           </a>
         </div>
@@ -339,7 +340,7 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
             alt="energyhub image">
           </amp-img>
           <br />
-          <a href="http://www.genesisenergy.co.nz/about/community/school-gen">
+          <a class="centerthings" href="http://www.genesisenergy.co.nz/about/community/school-gen">
             <button id="school-gen" class="genesis-button-original">Checkout Energy Hub!</button>
           </a>
         </div>
@@ -357,7 +358,7 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
             alt="schoolgen image">
           </amp-img>
           <br />
-          <a href="https://myaccount.genesisenergy.co.nz/login">
+          <a class="centerthings" href="https://myaccount.genesisenergy.co.nz/login">
             <button id="myaccount" class="genesis-button-original">Checkout School-gen!</button>
           </a>
         </div>
@@ -368,7 +369,9 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
         <div class="innercard" >
           <h2>My Account</h2>
           <p class="movinghouse-p">Stay in control and manage your energy account with the new look My Account.</p>
-          <button class="button-white">Log in to My Account</button>
+          <a class="centerthings" href="https://myaccount.genesisenergy.co.nz/login">
+            <button class="button-white">Log in to My Account</button>
+          </a>
         </div>
         <div class="card card-white rowdirection">
           <amp-img class="myac-electricity"
