@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>Hello, AMPs</title>
+    <title>Genesis Energy</title>
+    <link rel="icon" href="https://www.genesisenergy.co.nz/Genesis/Resources/app/images/favicon.ico">
     <link rel="canonical" href="http://example.ampproject.org/article-metadata.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
@@ -17,6 +18,7 @@
         ]
       }
     </script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
     <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async=""></script>
       <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>    <script custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async=""></script>
@@ -212,7 +214,7 @@
       <div class="sub-menu">
         <ul>
           <li>
-            <a href="#paynow">Pay your bill</a>
+            <a href="#paynow" id="pay-bill-click">Pay your bill</a>
           </li>
           <li>
             <a href="#moving-house">Moving Houses</a>
@@ -390,7 +392,30 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
       </div>
     </div>
     </section>
-
+    <amp-analytics type="googleanalytics" id="analytics1">
+        <script type="application/json">
+          {
+            "vars": {
+              "account": "UA-116065446-1"
+            },
+            "triggers": {
+              "trackPageview": {
+                "on": "visible",
+                "request": "pageview"
+              },
+              "trackEvent": {
+                "selector": "#pay-bill-click",
+                "on": "click",
+                "request": "event",
+                "vars": {
+                  "eventCategory": "Clicked Pay Bill Anchor",
+                  "eventAction": "click"
+                }
+              }
+            }
+          }
+        </script>
+        </amp-analytics>
   </body>
 
   <amp-sidebar id="sidebar"
