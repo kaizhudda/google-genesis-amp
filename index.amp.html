@@ -48,6 +48,10 @@
         font-family: "Circular Std Medium";
         src: url("fonts/CircularStd-Medium.woff");
       }
+      @font-face {
+        font-family: "Vale";
+        src: url("fonts/valefont.ttf");
+      }
       amp-accordion section[expanded] .show-more {
         display: none;
       }
@@ -62,20 +66,17 @@
       width: 250px;
       padding-right: 10px;
       }
+      .sidebar-span
       .amp-sidebar-image {
         line-height: 100px;
         vertical-align:middle;
       }
       .amp-close-image {
-        top: 15px;
+        top: 5px;
         left: 225px;
         cursor: pointer;
       }
-      li {
-        padding: 15px 10px;
-        list-style: none;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-      }
+      
       li > a {
         color: white;
         font-family: Circular Std Book;
@@ -85,17 +86,29 @@
       .previewOnly {
         font-weight: bold;
       }
-
+      #sidebar > ul > li { padding: 15px 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
       #sidebar-right nav.amp-sidebar-toolbar-target-shown {
           display: none;
       }
       #sidebar{padding-right: 0; opacity: 0.95;}
+      .sidebar-accordian-nested{background-color: #333;}
+      .sidebar-accordian-nested > section h4 {color: white; padding: 10px; font-weight: normal;}
+      .sidebar-accordian-nested > section p {color: white; padding: 10px 15px;}
+      .sidebar-accordian-nested > section p a {color: white; text-decoration: none; font-family: Circular Std Book;}
+      .sidebar-accordian-nested > section {border-bottom: 1px solid rgba(255,255,255,0.1);  color: white; font-family: Circular Std Book; font-weight: normal;}
+      .sidebar-accordian-nested > section[expanded] h4 {background-color: transparent; color: #F58025; border: 0;}
+      .sidebar-accordian-nested > section[expended] h4:after {content: "vsadasd";}
+
       .sidebar-accordian > section {border-bottom: 1px solid rgba(255,255,255,0.1);}
-      .sidebar-accordian > section[expanded] h4 {background-color: transparent; color: #F58025; }
+      .sidebar-accordian > section[expanded] h4 {background-color: transparent; color: #F58025; border: 0; }
+      .sidebar-accordian > section[expended] h4:after {content: "vsadasd";}
       .sidebar-accordian > section[expanded] ul li {padding: 15px; background-color: #333; font-family: Circular Std Book;}
       .sidebar-accordian > section > h4 {border: 0; background-color: transparent; font-family: Circular Std Book; font-weight: normal;padding: 15px 10px;}
       ul {padding: 0; margin: 0;}
       li {list-style-type: none;}
+      .payvia{padding: 14px;}
+      .arrow-span-black{float: right; color: black; font-family: "Vale";}
+      .arrow-span {float: right; color: white; font-family: "Vale"; padding-right: 5px;}
     /* any custom style goes here */
       .row { display: flex; width: 100%; position: absolute; bottom: 0;}
       .column-1{width: 100%;}
@@ -136,7 +149,7 @@
       .genesis-accordian > section {background-color: white; }
       .genesis-accordian > section > h4 {background-color: white; color: #333; font-family: Circular Std Book; padding: 14px; border-top: 1px solid #eee; border-bottom: 0}
       .genesis-accordian > section[expended] {background-color: red;}
-      .genesis-accordian > section > p{padding: 5px 15px;}
+      .genesis-accordian > section > p{padding: 5px 15px; font-size: 14px;}
       .genesis-flybuys {margin-top: -30px;}
       .genesis-flybuys ~ p {margin-top: 0;}
       .energyhub-image{max-width: 100%;}
@@ -151,7 +164,7 @@
   </head>
   <body>
     <header>
-      <div class="hamburger" on="tap:sidebar.toggle" class="ampstart-btn caps m2"   >☰
+      <div class="hamburger" on="tap:sidebar.toggle" class="ampstart-btn caps m2" tabindex="0" role="button">☰
       </div>
       <amp-img class="header-logo"
         width="60"
@@ -199,7 +212,7 @@
         </div>
       </div>
     </section>
-    <section> 
+    <section id="paynow"> 
       <div class="sub-menu">
         <ul>
           <li>
@@ -223,36 +236,46 @@
         </ul>
       </div>
     </section>
-    <section>
+    <section >
       <div class="card">
-        <div class="innercard" id="paynow">
+        <div class="innercard" >
           <h2>Pay your bill</h2>
           <p>Pay your power bills online whenever and wherever you like. Ensure you receive your prompt payment discount by paying on time.</p>
           <amp-accordion class="genesis-accordian">
             <section>
-              <h4>Pay Via My Account</h4>
+              <h4>Pay Via My Account<span class="arrow-span-black">v</span></h4>
               <p>View and pay your power bill using Credit/Debit Card, Direct Debit or Automatic Payment via My Account.</p>
             </section>
             <section>
-              <h4>Pay via Mobile App</h4>
+              <h4>Pay via Mobile App<span class="arrow-span-black">v</span></h4>
               <p>View and pay your power bill using your Credit/Debit Card via the new Genesis Energy Mobile App</p>
             </section>
             <section>
-              <h4>Payment Plan With Control-a-bill</h4>
+              <h4>Payment Plan With Control-a-bill<span class="arrow-span-black">v</span></h4>
               <p>We know that changing seasons and other factors can mean that your energy usage can be a bit all over the place.
-
+                  <br /></br />
 That's why we've come up with Control-a-bill, a convenient way to pay that lets you spread your energy payments out evenly, so you pay the same amount on each bill, helping you budget better and take control of your energy payments.</p>
             </section>
             <section>
-              <h4>Pay Via Internet Banking</h4>
-              <p>Internet banking allows you to make the payment when it suits you - any time on or before the due date.</p>
+              <h4>Pay Via Internet Banking<span class="arrow-span-black">v</span></h4>
+               <ul class="payvia">
+                 <li>              Internet banking allows you to make the payment when it suits you - any time on or before the due date.
+</li>
+                  <li>Bank Name: Genesis Energy Ltd</li>
+                  <li>Bank Number: 03-0502-0244320-00</li>
+                  <li>Reference: Use your customer number as reference.<br>
+                 </li>
+                  <li>If paying from an International bank account please add:<br>
+                  SWIFT CODE: WPACNZ2W</li>
+                </ul>
+             
             </section>
             <section>
-              <h4>Pay Over The Phone</h4>
+              <h4>Pay Over The Phone<span class="arrow-span-black">v</span></h4>
               <p>To pay over the phone with your card, call us on 0800 436 100.*</p>
             </section>
-            <section>
-              <h4>NZ Post</h4>
+            <section id="moving-house">
+              <h4>NZ Post<span class="arrow-span-black">v</span></h4>
               <p>Take your bill to any NZ Post outlet to pay by cash, cheque or EFTPOS^. Want to find out where your nearest NZ Post Shop is? Use the Post Shop Locator.</p>
             </section>
           </amp-accordion>
@@ -261,7 +284,7 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
     </section>
     <section>
       <div class="card card-orange">
-        <div class="innercard" id="moving-house">
+        <div class="innercard" >
           <h2>Moving House?</h2>
           <p class="movinghouse-p">Move online with Genesis and get your choice of future-facing tech.</p>
           <div class="card card-white">
@@ -273,14 +296,14 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
           <div class="card card-white">
             Cost of moving house
           </div>
-          <button class="button-white">Start moving</button>
+          <button id="flybuys" class="button-white">Start moving</button>
 
         </div>
       </div>
     </section>
-    <section>
+    <section >
       <div class="card">
-        <div class="innercard" id="flybuys">
+        <div class="innercard" >
           <amp-img class="genesis-flybuys"
             width="100"
             height="100"
@@ -288,13 +311,13 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
             alt="flybuys icons">
           </amp-img>
           <p>Join Genesis and start earaning points.</p>
-          <button class="genesis-button-original">Join flybuys now!</button>
+          <button id="energy-hub" class="genesis-button-original">Join flybuys now!</button>
         </div>
       </div>
     </section>
-    <section>
+    <section >
       <div class="card card-grey">
-        <div class="innercard" id="energy-hub">
+        <div class="innercard" >
           <h2>Energy Hub</h2>
           <p>A conveniently useful guide to help Kiwis make sense of products promising to make our lives easier. </p>
           <amp-img class="energyhub-image"
@@ -304,13 +327,13 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
             alt="energyhub image">
           </amp-img>
           <br />
-          <button class="genesis-button-original">Checkout Energy Hub!</button>
+          <button id="school-gen" class="genesis-button-original">Checkout Energy Hub!</button>
         </div>
       </div>
     </section>
-    <section>
+    <section >
       <div class="card">
-        <div class="innercard" id="school-gen">
+        <div class="innercard" >
           <h2>School-gen</h2>
           <p>We’re putting our energy into School-gen, providing education and inspiration for students, teachers and their families nationwide.</p>
           <amp-img class="schoolgen-image"
@@ -320,14 +343,14 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
             alt="schoolgen image">
           </amp-img>
           <br />
-          <button class="genesis-button-original">Checkout School-gen!</button>
+          <button id="myaccount" class="genesis-button-original">Checkout School-gen!</button>
         </div>
       </div>
     </section>
     
-    <section>
+    <section >
       <div class="card card-orange">
-        <div class="innercard" id="myaccount">
+        <div class="innercard" >
           <h2>My Account</h2>
           <p class="movinghouse-p">Stay in control and manage your energy account with the new look My Account.</p>
           <button class="button-white">Log in to My Account</button>
@@ -396,53 +419,139 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
         </script>
         </amp-analytics>
   </body>
+
   <amp-sidebar id="sidebar"
     layout="nodisplay"
     side="right">
     <amp-img class="amp-close-image"
-      src="assets/ic_close_black_18dp_2x.png"
-      width="20"
+      src="assets/close-icon.svg"
+      width="10"
       height="20"
       alt="close sidebar"
       on="tap:sidebar.close"
       role="button"
       tabindex="0"></amp-img>
+      
     <ul>
       <amp-accordion class="sidebar-accordian">
         <section>
-          <h4>Products</h4>
-          <ul>
-            <li>Electricity</li>
-            <li>Bottled Gas</li>
-            <li>Natural Gas</li>
-            <li>Solar</li>
-          </ul>
+          <h4>Products<span class="arrow-span">v</span></h4> 
+          <amp-accordion class="sidebar-accordian-nested">
+            <section>
+              <h4>Electricity<span class="arrow-span">v</span></h4>
+              <p>
+                <a href="http://www.genesisenergy.co.nz/electricity">Residential</a>
+              </p>
+            </section>
+            <section>
+              <h4>Bottled Gas<span class="arrow-span">v</span></h4>
+              <p>
+                <a href="http://www.genesisenergy.co.nz/bottle-gas">Residential</a>
+              </p>
+            </section>
+            <section>
+              <h4>Natural Gas<span class="arrow-span">v</span></h4>
+              <p>
+                <a href="http://www.genesisenergy.co.nz/natural-gas">Residential</a>
+              </p>
+            </section>
+            <section>
+              <h4>Solar<span class="arrow-span">v</span></h4>
+              <p>
+                <a href="http://www.genesisenergy.co.nz/solar">Residential</a>
+              </p>
+            </section>
+          </amp-accordion>
          
         </section>
         <section>
-          <h4>Residential</h4>
-          <ul>
-            <li>Products</li>
-            <li>Offers</li>
-            <li>Services</li>
-          </ul>        
+          <h4>Residential<span class="arrow-span">v</span></h4>
+          <amp-accordion class="sidebar-accordian-nested">
+            <section>
+              <h4>Products</h4>
+              <ul>
+                <li><a href="http://www.genesisenergy.co.nz/electricity">Electricity</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/bottled-gas">Bottled Gas</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/natural-gas">Natural Gas</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/solar">Solar</a></li>
+              </ul>
+            </section>
+            <section>
+              <h4>Offers</h4>
+              <ul>
+                <li><a href="http://www.genesisenergy.co.nz/get-flybuys">Flybuys</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/electricity/offers">Electricity</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/bottled-gas/offers">Bottled Gas</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/natural-gas/offers">Natural Gas</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/energy-your-way">Recommend a plan</a></li>
+              </ul>
+            </section>
+            <section>
+              <h4>Services</h4>
+              <ul>
+                <li><a href="http://www.genesisenergy.co.nz/moving-house">Moving House</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/services/my-acount">My Account</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/billing-and-payments">Billing & Payments</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/services/metering">Metering</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/plans-and-pricing">Plans & Pricing</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/services/trusted-trades">Trusted Trades</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/services/usage-reports">Usage Reports</a></li>
+              </ul>
+            </section>
+            
+          </amp-accordion>    
         </section>
         <section>
-          <h4>Business</h4>
-          <ul>
-            <li>Account Management</li>
-            <li>Services</li>
-          </ul>        
+          <h4>Business<span class="arrow-span">v</span></h4>
+          <amp-accordion class="sidebar-accordian-nested">
+            <section>
+              <h4>Account Management</h4>
+              <ul>
+                <li><a href="http://myaccount.genesisenergy.co.nz/login">My Account</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/services/billing-and-payment">Billing & Payments</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/moving-premises">Moving Business</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/services/meters">Metering</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/energy-tips">Energy Tips</a></li>
+              </ul>
+            </section>
+            <section>
+              <h4>Services</h4>
+              <ul>
+                <li><a href="http://signup.genesisenergy.co.nz/for-business">Request a quote</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/bottled-gas">LPG Refill Request</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/contact-sales">Contact Sales</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/services/smart-monitoring">Smart Monitoring</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/EIEP-agents">EIEP Agents</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/trade-connections">New Construction</a></li>
+              </ul>
+            </section>
+          </amp-accordion>    
         </section>
         <section>
-          <h4>Rural</h4>
-          <ul>
-            <li>Offers</li>
-            <li>Services</li>
-          </ul>        
+          <h4>Rural<span class="arrow-span">v</span></h4>
+          <amp-accordion class="sidebar-accordian-nested">
+            <section>
+              <h4>Offers</h4>
+              <ul>
+                <li><a href="http://www.genesisenergy.co.nz/rural/offers/farmhouse">Farm House</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/rural/offers/farmlands-offer">Farmlands</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/rural/offers/ruralco">Ruralco</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/for-business">Request a quote</a></li>
+              </ul>
+            </section>
+            <section>
+              <h4>Services</h4>
+              <ul>
+                <li><a href="http://myaccount.genesisenergy.co.nz/login">My Account</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/rural/services/meters">Metering</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/business/contact-sales">Contact Sales</a></li>
+                <li><a href="http://www.genesisenergy.co.nz/rural/pricing-plans">Pricing & Plans</a></li>
+              </ul>
+            </section>
+          </amp-accordion>    
         </section>
         <section>
-          <h4>About Us</h4>
+          <h4>About Us<span class="arrow-span">v</span></h4>
           <ul>
             <li>About Us</li>
             <li>Community</li>
