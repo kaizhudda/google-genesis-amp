@@ -102,9 +102,10 @@
       .column-2{flex: 1;}
       .column-3 { width: 33%; flex: 1; text-align: center; flex-direction: column; color: black;}
       .column-3 > p {margin-top: 0; font-family: Circular Std Book; color: white;}
-      .amp-footer{background-color: #333; color: white; font-family: Circular Std Book;}
+      .amp-footer{background-color: #464958; color: white; font-family: Circular Std Book; padding: 15px;}
       .amp-footer-header { color: #eee; padding: 15px; margin: 0;}
       .amp-footer-nav > ul > li {display: block; padding: 10px 15px; color: grey;}
+      .amp-footer-nav > ul > li > a {color: #a4a6ad;}
       .sub-menu {height: 75px; display: flex; width: 100%; overflow: auto; white-space: nowrap; background: linear-gradient(to right,#F58025,#F26526);; color: white;}
       .sub-menu > ul {margin: 0; padding: 0; align-self: center;}
       .sub-menu > ul > li {padding: 0; list-style-type: none; display: inline-block; padding: 15px; font-family: Circular Std Book;}
@@ -119,7 +120,7 @@
       .button-amp{position:absolute; align-items: center; justify-content: center; font-family: Circular Std Book;}
       .bottom-footer{margin-left: 15px}
       .social-media-icons{display: inline-block; padding-left: 20px;}.social-media-icons > ul > li {display: inline-block; padding: 10px;}
-      .registration{padding: 0; padding-left: 15px; margin: 0;}
+      .registration{padding-left: 15px; padding-bottom: 15px; padding-top: 20px; margin: 0; font-size: 14px; color: grey;}
       .card {padding: 15px; font-family: Circular Std Book; word-break: break-word;}.card > div > h2 { font-family: Circular Std Bold; font-size: 28px; margin: 0;}
       .card > .innercard {display: flex; flex-direction: column;}
       .card-orange{background: linear-gradient(to right,#F58025,#F26526); color: white;}
@@ -145,6 +146,7 @@
       .movinghouse-p{font-family: Circular Std Book; font-size: 18px;}
       .circular-icon-background{ margin: 0 auto;background-color: #F58025;border-radius: 50%;width: fit-content;padding: 8px 10px;}
       .genesis-button-original{font-family: Circular Std Medium; font-size: 16px;padding: 15px; background-color: #f58025; color: white; text-align: center; border-radius: 25px; border: 0; margin: 0 auto;}
+      .align-logo {position: relative; top: 10px;}
     </style>
   </head>
   <body>
@@ -454,7 +456,6 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
     </ul>
   </amp-sidebar>
   <footer class="amp-footer">
-    <h2 class="amp-footer-header">Footer</h2>
     <nav class="amp-footer-nav">
       <ul>
         <li><a>Contact Us</a></li>
@@ -462,17 +463,41 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
         <li><a>Terms and Conditions</a></li>
         <li><a>Privacy Policy</a></li>   
       </ul>
-      <amp-img class="bottom-footer"
-        src="images/logo.png"
-        width="65"
-        height="50">
+      <amp-img class="bottom-footer align-logo"
+        src="assets/genesis-small-logo.png"
+        width="60"
+        height="60">
       </amp-img>
       <div class="social-media-icons">
         <ul>
-          <li>icon1</li>
-          <li>icon1</li>
-          <li>icon1</li>
-          <li>icon1</li>
+          <a href="https://www.facebook.com/genesisenergynz">
+            <amp-img class="bottom-footer"
+            src="assets/icon-facebook.png"
+            width="30"
+            height="30">
+          </amp-img>
+          </a>
+          <a href="https://www.linkedin.com/company/genesis-energy">
+          <amp-img class="bottom-footer"
+            src="assets/icon-linkedin.png"
+            width="30"
+            height="30">
+          </amp-img>
+          </a>
+          <a href="https://www.youtube.com/user/GenesisEnergyNZ">
+            <amp-img class="bottom-footer"
+              src="assets/icon-youtube.png"
+              width="30"
+              height="30">
+            </amp-img>
+          </a>
+          <a href="https://www.genesisenergy.co.nz/energy-insights">
+            <amp-img class="bottom-footer"
+              src="assets/icon-blogger.png"
+              width="30"
+              height="30">
+            </amp-img>
+          </a>
         </ul>
       </div>
       <p class="registration">2018 Genesis Energy</p>
