@@ -222,16 +222,16 @@
             <a href="#moving-house" id="moving-house">Moving Houses</a>
           </li>
           <li>
-            <a href="#flybuys"> Fly Buys</a>
+            <a href="#flybuys" id="flybuys"> Fly Buys</a>
           </li>
           <li>
-            <a href="#energy-hub">Energy Hub</a>
+            <a href="#energy-hub" id="energy-hub">Energy Hub</a>
           </li>
           <li>
-            <a href="#school-gen">School-gen</a>
+            <a href="#school-gen" id="school-gen">School-gen</a>
           </li>
           <li>
-            <a href="#myaccoung">My Account</a>
+            <a href="#myaccoung" id="my-account-tab">My Account</a>
           </li>
         </ul>
       </div>
@@ -420,6 +420,69 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
                 "request": "event",
                 "vars": {
                   "eventCategory": "Clicked Moving House",
+                  "eventAction": "click"
+                }
+              },
+              "trackEvent": {
+                "selector": "#my-account-tab",
+                "on": "click",
+                "request": "event",
+                "vars": {
+                  "eventCategory": "Clicked My Account from Menu",
+                  "eventAction": "click"
+                }
+              },
+              "trackEvent": {
+                "selector": "#flybuys",
+                "on": "click",
+                "request": "event",
+                "vars": {
+                  "eventCategory": "Clicked Flybuys from Menu",
+                  "eventAction": "click"
+                }
+              },
+              "trackEvent": {
+                "selector": "#energy-hub",
+                "on": "click",
+                "request": "event",
+                "vars": {
+                  "eventCategory": "Clicked Energy Hub from Menu",
+                  "eventAction": "click"
+                }
+              },
+              "trackEvent": {
+                "selector": "#school-gen",
+                "on": "click",
+                "request": "event",
+                "vars": {
+                  "eventCategory": "Clicked Energy Hub from Menu",
+                  "eventAction": "click"
+                }
+              },
+              "trackEvent": {
+                "selector": "#join-genesis-header",
+                "on": "click",
+                "request": "event",
+                "vars": {
+                  "eventCategory": "Clicked Join Genesis from Header",
+                  "eventAction": "click"
+                }
+              },
+              "trackEvent": {
+                "selector": "#contact-us-header",
+                "on": "click",
+                "request": "event",
+                "vars": {
+                  "eventCategory": "Clicked Contact Us from Header",
+                  "eventAction": "click"
+                }
+              },
+              "trackEvent": {
+                "selector": "#move-home-header",
+                "on": "click",
+                "request": "event",
+                "vars": {
+                  "eventCategory": "Clicked Move Home from Header",
                   "eventAction": "click"
                 }
               }
