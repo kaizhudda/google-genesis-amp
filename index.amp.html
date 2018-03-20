@@ -219,7 +219,7 @@
             <a href="#paynow" id="pay-bill-click">Pay your bill</a>
           </li>
           <li>
-            <a href="#moving-house">Moving Houses</a>
+            <a href="#moving-house" id="moving-house">Moving Houses</a>
           </li>
           <li>
             <a href="#flybuys"> Fly Buys</a>
@@ -411,6 +411,15 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
                 "request": "event",
                 "vars": {
                   "eventCategory": "Clicked Pay Bill Anchor",
+                  "eventAction": "click"
+                }
+              },
+                "trackEvent": {
+                "selector": "#moving-house",
+                "on": "click",
+                "request": "event",
+                "vars": {
+                  "eventCategory": "Clicked Moving House",
                   "eventAction": "click"
                 }
               }
