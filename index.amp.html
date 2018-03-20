@@ -19,8 +19,7 @@
     </script>
     <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
     <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async=""></script>
-    <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async=""></script>
-    <script custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async=""></script>
+      <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>    <script custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async=""></script>
     <script custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js" async=""></script>
     <script custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js" async=""></script>
     <script custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js" async=""></script>
@@ -57,6 +56,42 @@
       amp-accordion section[expanded] h4 {
         background-color: #eee;
       }
+      amp-sidebar {
+      width: 250px;
+      padding-right: 10px;
+      }
+      .amp-sidebar-image {
+        line-height: 100px;
+        vertical-align:middle;
+      }
+      .amp-close-image {
+        top: 15px;
+        left: 225px;
+        cursor: pointer;
+      }
+      li {
+        padding: 15px 10px;
+        list-style: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+      li > a {
+        color: white;
+        font-family: Circular Std Book;
+        text-decoration: none;
+      }
+
+      .previewOnly {
+        font-weight: bold;
+      }
+
+      #sidebar-right nav.amp-sidebar-toolbar-target-shown {
+          display: none;
+      }
+      #sidebar{padding-right: 0; opacity: 0.95;}
+      .sidebar-accordian > section {border-bottom: 1px solid rgba(255,255,255,0.1);}
+      .sidebar-accordian > section[expanded] h4 {background-color: transparent; color: #F58025; }
+      .sidebar-accordian > section[expanded] ul li {padding: 15px; background-color: #333; font-family: Circular Std Book;}
+      .sidebar-accordian > section > h4 {border: 0; background-color: transparent; font-family: Circular Std Book; font-weight: normal;padding: 15px 10px;}
       ul {padding: 0; margin: 0;}
       li {list-style-type: none;}
     /* any custom style goes here */
@@ -71,6 +106,7 @@
       .sub-menu {height: 75px; display: flex; width: 100%; overflow: auto; white-space: nowrap; background: linear-gradient(to right,#F58025,#F26526);; color: white;}
       .sub-menu > ul {margin: 0; padding: 0; align-self: center;}
       .sub-menu > ul > li {padding: 0; list-style-type: none; display: inline-block; padding: 15px; font-family: Circular Std Book;}
+      .sub-menu > ul > li > a {color: white; text-decoration:  none;}
       .banner-icon-image {border-radius: 50%; width: 50px; height: 50px}
       .banner-image{opacity: 0.8;}
       .text-orange{color: #F58025;}
@@ -90,7 +126,7 @@
       .profile-image{margin: 0 auto;}
       .flex{display: flex; text-align: center;}
       .rowdirection{flex-direction: row; display: flex;}
-      header{border-bottom: 1px solid #eee;}
+      header{border-bottom: 1px solid #eee; position: fixed; background-color: white; right: 0; left: 0; z-index: 111;}
       .header-logo{margin-left: 15px;}
       .hamburger{display: inline-block; float: right; padding: 15px;}
       .genesis-accordian{margin: 0 -15px; background-color: white; }
@@ -102,7 +138,7 @@
       .genesis-flybuys ~ p {margin-top: 0;}
       .energyhub-image{max-width: 100%;}
       .schoolgen-image{max-width: 100%;}
-
+      #sidebar{background-color: #464958; color: white;}
       .myac-p{display: inline-block; padding-left: 15px; font-family: Circular Std Medium; font-size: 18px;}
       .movinghouse-p{font-family: Circular Std Book; font-size: 18px;}
       .circular-icon-background{ margin: 0 auto;background-color: #F58025;border-radius: 50%;width: fit-content;padding: 8px 10px;}
@@ -111,7 +147,7 @@
   </head>
   <body>
     <header>
-      <div class="hamburger" role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger md-hide lg-hide pr2  ">☰
+      <div class="hamburger" on="tap:sidebar.toggle" class="ampstart-btn caps m2"   >☰
       </div>
       <amp-img class="header-logo"
         width="60"
@@ -163,29 +199,29 @@
       <div class="sub-menu">
         <ul>
           <li>
-            <a>Pay your bill</a>
+            <a href="#paynow">Pay your bill</a>
           </li>
           <li>
-            <a>Fly Buys</a>
+            <a href="#moving-house">Moving Houses</a>
           </li>
           <li>
-            <a>Energy Hub</a>
+            <a href="#flybuys"> Fly Buys</a>
           </li>
           <li>
-            <a>Anchor 1</a>
+            <a href="#energy-hub">Energy Hub</a>
           </li>
           <li>
-            <a>Anchor 2</a>
+            <a href="#school-gen">School-gen</a>
           </li>
           <li>
-            <a>Anchor 3</a>
+            <a href="#myaccoung">My Account</a>
           </li>
         </ul>
       </div>
     </section>
     <section>
       <div class="card">
-        <div class="innercard">
+        <div class="innercard" id="paynow">
           <h2>Pay your bill</h2>
           <p>Pay your power bills online whenever and wherever you like. Ensure you receive your prompt payment discount by paying on time.</p>
           <amp-accordion class="genesis-accordian">
@@ -221,7 +257,7 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
     </section>
     <section>
       <div class="card card-orange">
-        <div class="innercard">
+        <div class="innercard" id="moving-house">
           <h2>Moving House?</h2>
           <p class="movinghouse-p">Move online with Genesis and get your choice of future-facing tech.</p>
           <div class="card card-white">
@@ -240,7 +276,7 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
     </section>
     <section>
       <div class="card">
-        <div class="innercard">
+        <div class="innercard" id="flybuys">
           <amp-img class="genesis-flybuys"
             width="100"
             height="100"
@@ -254,7 +290,7 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
     </section>
     <section>
       <div class="card card-grey">
-        <div class="innercard">
+        <div class="innercard" id="energy-hub">
           <h2>Energy Hub</h2>
           <p>A conveniently useful guide to help Kiwis make sense of products promising to make our lives easier. </p>
           <amp-img class="energyhub-image"
@@ -270,7 +306,7 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
     </section>
     <section>
       <div class="card">
-        <div class="innercard">
+        <div class="innercard" id="school-gen">
           <h2>School-gen</h2>
           <p>We’re putting our energy into School-gen, providing education and inspiration for students, teachers and their families nationwide.</p>
           <amp-img class="schoolgen-image"
@@ -287,7 +323,7 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
     
     <section>
       <div class="card card-orange">
-        <div class="innercard">
+        <div class="innercard" id="myaccount">
           <h2>My Account</h2>
           <p class="movinghouse-p">Stay in control and manage your energy account with the new look My Account.</p>
           <button class="button-white">Log in to My Account</button>
@@ -328,13 +364,70 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
           </amp-img>
           <p class="myac-p">Check your gas usage!</p>
         </div>
-        
       </div>
     </div>
-      
     </section>
 
   </body>
+  <amp-sidebar id="sidebar"
+    layout="nodisplay"
+    side="right">
+    <amp-img class="amp-close-image"
+      src="assets/ic_close_black_18dp_2x.png"
+      width="20"
+      height="20"
+      alt="close sidebar"
+      on="tap:sidebar.close"
+      role="button"
+      tabindex="0"></amp-img>
+    <ul>
+      <amp-accordion class="sidebar-accordian">
+        <section>
+          <h4>Products</h4>
+          <ul>
+            <li>Electricity</li>
+            <li>Bottled Gas</li>
+            <li>Natural Gas</li>
+            <li>Solar</li>
+          </ul>
+         
+        </section>
+        <section>
+          <h4>Residential</h4>
+          <ul>
+            <li>Products</li>
+            <li>Offers</li>
+            <li>Services</li>
+          </ul>        
+        </section>
+        <section>
+          <h4>Business</h4>
+          <ul>
+            <li>Account Management</li>
+            <li>Services</li>
+          </ul>        
+        </section>
+        <section>
+          <h4>Rural</h4>
+          <ul>
+            <li>Offers</li>
+            <li>Services</li>
+          </ul>        
+        </section>
+        <section>
+          <h4>About Us</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Community</li>
+            <li>Generation Assets</li>
+            <li>Investors</li>
+          </ul>        
+        </section>
+      </amp-accordion>
+      <li><a href="/">Contact and Support</a></li>
+      <li><a href="/">My Account</a></li>
+    </ul>
+  </amp-sidebar>
   <footer class="amp-footer">
     <h2 class="amp-footer-header">Footer</h2>
     <nav class="amp-footer-nav">
