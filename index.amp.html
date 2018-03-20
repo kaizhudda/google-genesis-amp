@@ -76,7 +76,7 @@
         left: 225px;
         cursor: pointer;
       }
-      
+      a {text-decoration: none;}
       li > a {
         color: white;
         font-family: Circular Std Book;
@@ -166,6 +166,7 @@
     <header>
       <div class="hamburger" on="tap:sidebar.toggle" class="ampstart-btn caps m2" tabindex="0" role="button">☰
       </div>
+      
       <amp-img class="header-logo"
         width="60"
         height="50"
@@ -178,36 +179,44 @@
         width="100vw"
         height="250">
       </amp-img>
-      <button class="button-amp">Log to My Account</button>
+      <a href="https://myaccount.genesisenergy.co.nz/login">
+      <button class="button-amp" >Log to My Account</button>
+      </a>
       <div class="row">
         <div class="column-3">
-          <div class="circular-icon-background">
-            <amp-img class="banner-icons"
-              src="assets/joinus.svg"
-              width="35"
-              height="35">
-            </amp-img>
-          </div>
+          <a href="https://signup.genesisenergy.co.nz/move-to-the-future/?offer=dual">
+            <div class="circular-icon-background">
+              <amp-img class="banner-icons"
+                src="assets/joinus.svg"
+                width="35"
+                height="35">
+              </amp-img>
+            </div>
+          </a>
           <p>Join Genesis</p>
         </div>
         <div class="column-3">
-        <div class="circular-icon-background">
-           <amp-img class="banner-icons"
-            src="assets/contactus.svg"
-            width="35"
-            height="35">
-          </amp-img>
-        </div>
+          <a href="https://www.genesisenergy.co.nz/contact-and-support">
+            <div class="circular-icon-background">
+              <amp-img class="banner-icons"
+                src="assets/contactus.svg"
+                width="35"
+                height="35">
+              </amp-img>
+            </div>
+          </a>
           <p>Contact Us</p>
         </div>
         <div class="column-3">
-          <div class="circular-icon-background">
-            <amp-img class="banner-icons"
-              src="assets/movinghome.svg"
-              width="35"
-              height="35">
-            </amp-img>
-          </div>
+          <a href="https://www.genesisenergy.co.nz/moving-house">
+            <div class="circular-icon-background">
+              <amp-img class="banner-icons"
+                src="assets/movinghome.svg"
+                width="35"
+                height="35">
+              </amp-img>
+            </div>
+          </a>
           <p>Move Home</p>
         </div>
       </div>
@@ -296,8 +305,9 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
           <div class="card card-white">
             Cost of moving house
           </div>
-          <button id="flybuys" class="button-white">Start moving</button>
-
+          <a href="https://www.genesisenergy.co.nz/get-flybuys">
+            <button id="flybuys" class="button-white">Start moving</button>
+          </a>
         </div>
       </div>
     </section>
@@ -311,7 +321,9 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
             alt="flybuys icons">
           </amp-img>
           <p>Join Genesis and start earaning points.</p>
-          <button id="energy-hub" class="genesis-button-original">Join flybuys now!</button>
+          <a href="https://www.genesisenergyhub.co.nz">
+            <button id="energy-hub" class="genesis-button-original">Join flybuys now!</button>
+          </a>
         </div>
       </div>
     </section>
@@ -327,7 +339,9 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
             alt="energyhub image">
           </amp-img>
           <br />
-          <button id="school-gen" class="genesis-button-original">Checkout Energy Hub!</button>
+          <a href="http://www.genesisenergy.co.nz/about/community/school-gen">
+            <button id="school-gen" class="genesis-button-original">Checkout Energy Hub!</button>
+          </a>
         </div>
       </div>
     </section>
@@ -343,11 +357,12 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
             alt="schoolgen image">
           </amp-img>
           <br />
-          <button id="myaccount" class="genesis-button-original">Checkout School-gen!</button>
+          <a href="https://myaccount.genesisenergy.co.nz/login">
+            <button id="myaccount" class="genesis-button-original">Checkout School-gen!</button>
+          </a>
         </div>
       </div>
     </section>
-    
     <section >
       <div class="card card-orange">
         <div class="innercard" >
@@ -673,10 +688,10 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
   <footer class="amp-footer">
     <nav class="amp-footer-nav">
       <ul>
-        <li><a>Contact Us</a></li>
-        <li><a>Accessibility</a></li>
-        <li><a>Terms and Conditions</a></li>
-        <li><a>Privacy Policy</a></li>   
+        <li><a href="http://www.genesisenergy.co.nz/contact-and-support">Contact Us</a></li>
+        <li><a href="http://www.genesisenergy.co.nz/accessibility">Accessibility</a></li>
+        <li><a href="http://www.genesisenergy.co.nz/genesis-terms">Terms and Conditions</a></li>
+        <li><a href="http://www.genesisenergy.co.nz/privacy-policy">Privacy Policy</a></li>   
       </ul>
       <amp-img class="bottom-footer align-logo"
         src="assets/genesis-small-logo.png"
