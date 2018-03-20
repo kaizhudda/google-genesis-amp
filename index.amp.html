@@ -17,6 +17,7 @@
         ]
       }
     </script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
     <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async=""></script>
       <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>    <script custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async=""></script>
@@ -367,7 +368,21 @@ That's why we've come up with Control-a-bill, a convenient way to pay that lets 
       </div>
     </div>
     </section>
-
+    <amp-analytics type="googleanalytics" id="analytics1">
+        <script type="application/json">
+        {
+          "vars": {
+            "account": "UA-116065446-1" 
+          },
+          "triggers": {
+            "trackPageview": { 
+              "on": "visible",
+              "request": "pageview"
+            }
+          }
+        }
+        </script>
+        </amp-analytics>
   </body>
   <amp-sidebar id="sidebar"
     layout="nodisplay"
