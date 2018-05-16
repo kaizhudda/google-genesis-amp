@@ -120,12 +120,12 @@
       .amp-footer-header { color: #eee; padding: 15px; margin: 0;}
       .amp-footer-nav > ul > li {display: block; padding: 10px 15px; color: grey;}
       .amp-footer-nav > ul > li > a {color: #a4a6ad;}
-      .sub-menu {height: 75px; display: flex; width: 100%; overflow: auto; white-space: nowrap; background: linear-gradient(to right,#F58025,#F26526);; color: white;}
-      .sub-menu > ul {margin: 0; padding: 0; align-self: center;}
-      .sub-menu > ul > li {padding: 0; list-style-type: none; display: inline-block; padding: 15px; font-family: Circular Std Book;}
-      .sub-menu > ul > li > a {color: white; text-decoration:  none;}
+      .sub-menu {height: 75px; width: 100%; background-color: #ebe9e9; display: flex; justify-content: center;}
+      .sub-menu > ul {margin: 0; padding: 0; align-self: center; display: flex; width: 100%;}
+      .sub-menu > ul > li {padding: 0; list-style-type: none; display: flex; align-items: center; padding: 15px; font-family: Circular Std Book; flex: 1; justify-content: center;}
+      .sub-menu > ul > li > a {color: black; text-decoration:  none;}
       .banner-icon-image {border-radius: 50%; width: 50px; height: 50px}
-      .banner-image{opacity: 0.8;}
+      .banner-image{opacity: 1; text-align: center;}
       .text-orange{color: #F58025;}
       .button-amp{font-family: Circular Std Book; position: absolute; left: 50%; top: 40%; transform: translate(-50%, -50%); border-radius: 25px; background-color: transparent; border: 2px solid white; color: white; padding: 10px 15px;  }
       .button-white{font-family: Circular Std Book; margin: 0 auto; border-radius: 25px; border: 2px solid white; color: white; background-color: transparent; padding: 15px;}
@@ -160,8 +160,19 @@
       .myac-p{display: inline-block; padding-left: 15px; font-family: Circular Std Medium; font-size: 18px;}
       .movinghouse-p{font-family: Circular Std Book; font-size: 18px;}
       .circular-icon-background{ margin: 0 auto;background-color: #F58025;border-radius: 50%;width: fit-content;padding: 8px 10px;}
-      .genesis-button-original{font-family: Circular Std Medium; font-size: 16px;padding: 15px; background-color: #f58025; color: white; text-align: center; border-radius: 25px; border: 0; margin: 0 auto;}
+      .genesis-button-original{font-family: Circular Std Medium; font-size: 14px;padding: 15px 60px; background-color: #f58025; color: white; text-align: center; border-radius: 25px; border: 0; margin: 0 auto;}
       .align-logo {position: relative; top: 10px;}
+      .header-myaccount{float:right; color: #F58025; border: none; background-color: transparent; padding: 17px 10px; font-size: 14px; font-family: Circular Std Medium;}
+      .join-genesis-section{text-align:center; padding: 0 15px;}
+      .h2-amp-text{font-family: Circular Std Bold; font-size: 32px; color: #464958;}
+      .join-genesis-section > a > button {margin-bottom: 20px;}
+      .mini-menu-p {font-family: Circular Std Medium; font-size: 16px; margin: 0; padding: 20px 5px;}
+      .mini-menu-items > a {color: #333;}
+      .mini-menu-amp {background-image: url('images/wavy-background.png'); background-size: contain; background-repeat: no-repeat; background-position-y: bottom;}
+      .withyouforyou{margin: 0 20px 20px 20px; background-color: #f7f7f7; text-align: center;}
+      .withyouforyou > h2 {font-family: Circular Std Bold; color: #F58025;}
+      .withyouforyou > p {font-family: Circular Std Book;}
+      .withyouforyou > a > button {margin-bottom: 20px;}
     </style>
   </head>
   <body>
@@ -175,245 +186,129 @@
         height="50"
         src="images/logo.png">
       </amp-img>
+      <a href="https://myaccount.genesisenergy.co.nz/login">
+        <button class="header-myaccount" >My Account</button>
+        </a>
     </header>
     <section class="banner-section column-1 center-aligned">
       <amp-img class="banner-image" alt="A beautiful sunset"
-        src="assets/background-image.jpg"
+        src="images/genesis-amp-homepage.jpg"
         width="100vw"
-        height="250">
+        height="250"
+        layout="fixed">
       </amp-img>
-      <a href="https://myaccount.genesisenergy.co.nz/login">
-      <button class="button-amp" >Log to My Account</button>
-      </a>
-      <div class="row">
-        <div class="column-3">
-          <a href="https://signup.genesisenergy.co.nz/move-to-the-future/?offer=dual" id="join-genesis-header">
-            <div class="circular-icon-background">
-              <amp-img class="banner-icons"
-                src="assets/joinus.svg"
-                width="35"
-                height="35">
-              </amp-img>
-            </div>
-          </a>
-          <p>Join Jenesis</p>
-        </div>
-        <div class="column-3">
-          <a href="https://www.genesisenergy.co.nz/contact-and-support" id="contact-us-header">
-            <div class="circular-icon-background">
-              <amp-img class="banner-icons"
-                src="assets/contactus.svg"
-                width="35"
-                height="35">
-              </amp-img>
-            </div>
-          </a>
-          <p>Contact Us</p>
-        </div>
-        <div class="column-3">
-          <a href="https://www.genesisenergy.co.nz/moving-house" id="move-home-header">
-            <div class="circular-icon-background">
-              <amp-img class="banner-icons"
-                src="assets/movinghome.svg"
-                width="35"
-                height="35">
-              </amp-img>
-            </div>
-          </a>
-          <p>Move Home</p>
-        </div>
+    </section>
+    <section>
+      <div class="join-genesis-section">
+        <h2 class="h2-amp-text">
+          Join Genesis today and get up to $300 credit plus the Energy IQ app.
+        </h2>
+        <a class="centerthings" href="https://www.genesisenergyhub.co.nz">
+          <button id="energy-hub" class="genesis-button-original">Join Today</button>
+        </a>
       </div>
     </section>
     <section id="paynow"> 
       <div class="sub-menu">
         <ul>
-          <li>
-            <a href="#paynow" id="pay-bill-click">Pay your bill</a>
+          <li class="try">
+            <a href="#moving-house" id="moving-house">
+              <amp-img
+                src="images/residentual.png"
+                width="30"
+                height="25">
+              </amp-img>
+            </a> 
           </li>
           <li>
-            <a href="#moving-house" id="moving-house">Moving Houses</a>
+            <a href="#moving-house" id="moving-house">
+              <amp-img
+                src="images/rural.png"
+                width="25"
+                height="25">
+              </amp-img>
+            </a>
           </li>
           <li>
-            <a href="#flybuys" id="flybuys"> Fly Buys</a>
-          </li>
-          <li>
-            <a href="#energy-hub" id="energy-hub">Energy Hub</a>
-          </li>
-          <li>
-            <a href="#school-gen" id="school-gen">School-gen</a>
-          </li>
-          <li>
-            <a href="#myaccoung" id="my-account-tab">My Account</a>
+            <a href="#flybuys" id="flybuys">
+              <amp-img
+                src="images/rural.png"
+                width="25"
+                height="25">
+              </amp-img>
+            </a>
           </li>
         </ul>
       </div>
     </section>
-    <section >
-      <div class="card">
-        <div class="innercard" >
-          <h2>Pay your bill</h2>
-          <p>Pay your power bills online whenever and wherever you like. Ensure you receive your prompt payment discount by paying on time.</p>
-          <amp-accordion class="genesis-accordian">
-            <section>
-              <h4>Pay Via My Account<span class="arrow-span-black">v</span></h4>
-              <p>View and pay your power bill using Credit/Debit Card, Direct Debit or Automatic Payment via My Account.</p>
-            </section>
-            <section>
-              <h4>Pay via Mobile App<span class="arrow-span-black">v</span></h4>
-              <p>View and pay your power bill using your Credit/Debit Card via the new Genesis Energy Mobile App</p>
-            </section>
-            <section>
-              <h4>Payment Plan With Control-a-bill<span class="arrow-span-black">v</span></h4>
-              <p>We know that changing seasons and other factors can mean that your energy usage can be a bit all over the place.
-                  <br /></br />
-That's why we've come up with Control-a-bill, a convenient way to pay that lets you spread your energy payments out evenly, so you pay the same amount on each bill, helping you budget better and take control of your energy payments.</p>
-            </section>
-            <section>
-              <h4>Pay Via Internet Banking<span class="arrow-span-black">v</span></h4>
-               <ul class="payvia">
-                 <li>              Internet banking allows you to make the payment when it suits you - any time on or before the due date.
-</li>
-                  <li>Bank Name: Genesis Energy Ltd</li>
-                  <li>Bank Number: 03-0502-0244320-00</li>
-                  <li>Reference: Use your customer number as reference.<br>
-                 </li>
-                  <li>If paying from an International bank account please add:<br>
-                  SWIFT CODE: WPACNZ2W</li>
-                </ul>
-             
-            </section>
-            <section>
-              <h4>Pay Over The Phone<span class="arrow-span-black">v</span></h4>
-              <p>To pay over the phone with your card, call us on 0800 436 100.*</p>
-            </section>
-            <section id="moving-house">
-              <h4>NZ Post<span class="arrow-span-black">v</span></h4>
-              <p>Take your bill to any NZ Post outlet to pay by cash, cheque or EFTPOS^. Want to find out where your nearest NZ Post Shop is? Use the Post Shop Locator.</p>
-            </section>
-          </amp-accordion>
+    <section class="mini-menu-amp">
+      <div>
+        <div class="mini-menu-items">
+          <a href="https://myaccount.genesisenergy.co.nz/login">
+            <amp-img
+              src="images/sign-up.svg"
+              width="25"
+              height="25">
+            </amp-img>
+            <p class="mini-menu-p">Energy IQ Login</p>
+          </a>
+        </div>
+        <div class="mini-menu-items">
+          <a href="https://uat.genesisenergy.co.nz/moving-house">
+            <p class="mini-menu-p">Moving House</p>
+          </a>
+        </div>
+        <div class="mini-menu-items">
+          <a href="https://uat.genesisenergy.co.nz/plans-and-pricing">          
+            <p class="mini-menu-p">Compare Plans</p>
+          </a>
+        </div>
+        <div class="mini-menu-items">
+          <a href="https://signup.genesisenergy.co.nz/winter-offers/?offer=dual">          
+            <p class="mini-menu-p">Join us</p>
+          </a>
+        </div>
+        <div class="mini-menu-items">
+          <a href="https://genesisenergyhub.co.nz/">                    
+            <p class="mini-menu-p">Energyhub</p>
+          </a>
         </div>
       </div>
     </section>
     <section>
-      <div class="card card-orange">
-        <div class="innercard" >
-          <h2>Moving House?</h2>
-          <p class="movinghouse-p">Move online with Genesis and get your choice of future-facing tech.</p>
-          <div class="card card-white">
-            Moving home checklist
-          </div>
-          <div class="card card-white">
-            Survival tips for moving house with kids
-          </div>
-          <div class="card card-white">
-            Cost of moving house
-          </div>
-          <a class="centerthings" href="https://www.genesisenergy.co.nz/get-flybuys">
-            <button id="flybuys" class="button-white">Start moving</button>
-          </a>
-        </div>
+      <div class="withyouforyou">
+        <amp-img layout="responsive" class="genesis-withyouforyou"
+          src="images/withyouforyou.jpg"
+          width="300"
+          height="150">
+        </amp-img>
+        <h2>
+          With you. For you.
+        </h2>
+        <p>We're an energy company collaborating with our customers for a better tomorrow.</p>
+        <a class="centerthings" href="https://uat.genesisenergy.co.nz/about/community/with-you-for-you">
+          <button id="energy-hub" class="genesis-button-original">Find out more</button>
+        </a>
       </div>
     </section>
-    <section >
-      <div class="card">
-        <div class="innercard" >
-          <amp-img class="genesis-flybuys"
-            width="100"
-            height="100"
-            src="assets/Fly_buys_logo.svg.svg"
-            alt="flybuys icons">
+    <section>
+        <div class="withyouforyou">
+          <amp-img layout="responsive" class="genesis-withyouforyou"
+            src="images/myaccountimage.png"
+            width="300"
+            height="150">
           </amp-img>
-          <p>Join Genesis and start earaning points.</p>
-          <a class="centerthings" href="https://www.genesisenergyhub.co.nz">
-            <button id="energy-hub" class="genesis-button-original">Join flybuys now!</button>
+          <h2>
+            Take control of your energy with Energy IQ.
+          </h2>
+          <p>Made in collaboration with our customers, the Energy IQ app has powerful tools to forecast, compare and understand your energy use.</p>
+          <a class="centerthings" href="https://uat.genesisenergy.co.nz/services/energyiq">
+            <button id="energy-hub" class="genesis-button-original">Find out more</button>
           </a>
         </div>
-      </div>
-    </section>
-    <section >
-      <div class="card card-grey">
-        <div class="innercard" >
-          <h2>Energy Hub</h2>
-          <p>A conveniently useful guide to help Kiwis make sense of products promising to make our lives easier. </p>
-          <amp-img class="energyhub-image"
-            width="100vh"
-            height="200"
-            src="assets/energyhub.jpg"
-            alt="energyhub image">
-          </amp-img>
-          <br />
-          <a class="centerthings" href="http://www.genesisenergy.co.nz/about/community/school-gen">
-            <button id="school-gen" class="genesis-button-original">Checkout Energy Hub!</button>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section >
-      <div class="card">
-        <div class="innercard" >
-          <h2>School-gen</h2>
-          <p>We’re putting our energy into School-gen, providing education and inspiration for students, teachers and their families nationwide.</p>
-          <amp-img class="schoolgen-image"
-            width="100vh"
-            height="200"
-            src="assets/schoolgen.jpg"
-            alt="schoolgen image">
-          </amp-img>
-          <br />
-          <a class="centerthings" href="https://myaccount.genesisenergy.co.nz/login">
-            <button id="myaccount" class="genesis-button-original">Checkout School-gen!</button>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section >
-      <div class="card card-orange">
-        <div class="innercard" >
-          <h2>My Account</h2>
-          <p class="movinghouse-p">Stay in control and manage your energy account with the new look My Account.</p>
-          <a class="centerthings" href="https://myaccount.genesisenergy.co.nz/login">
-            <button class="button-white">Log in to My Account</button>
-          </a>
-        </div>
-        <div class="card card-white rowdirection">
-          <amp-img class="myac-electricity"
-            width="50"
-            height="50"
-            src="assets/electricity.svg"
-            alt="electricity">
-          </amp-img>
-          <p class="myac-p">Track your electricity usage!</p>
-        </div>
-        <div class="card card-white rowdirection">
-          <amp-img class="myac-electricity"
-            width="50"
-            height="50"
-            src="assets/solar.svg"
-            alt="electricity">
-          </amp-img>
-          <p class="myac-p">Check your solar usage!</p>
-        </div>
-        <div class="card card-white rowdirection">
-          <amp-img class="myac-electricity"
-            width="50"
-            height="50"
-            src="assets/lpg.svg"
-            alt="electricity">
-          </amp-img>
-          <p class="myac-p">Re-order your lpg bottles!</p>
-        </div>
-        <div class="card card-white rowdirection">
-          <amp-img class="myac-electricity"
-            width="50"
-            height="50"
-            src="assets/gas.svg"
-            alt="electricity">
-          </amp-img>
-          <p class="myac-p">Check your gas usage!</p>
-        </div>
-      </div>
-    </div>
-    </section>
+      </section>
+    
+   
     <amp-analytics type="googleanalytics" id="analytics1">
         <script type="application/json">
           {
