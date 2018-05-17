@@ -125,7 +125,7 @@
       .sub-menu > ul > li {padding: 0; list-style-type: none; display: flex; align-items: center; padding: 15px; font-family: Circular Std Book; flex: 1; justify-content: center;}
       .sub-menu > ul > li > a {color: black; text-decoration:  none;}
       .banner-icon-image {border-radius: 50%; width: 50px; height: 50px}
-      .banner-image{opacity: 1; text-align: center;}
+      .banner-image{opacity: 1; text-align: center; margin-top: 70px;}
       .text-orange{color: #F58025;}
       .button-amp{font-family: Circular Std Book; position: absolute; left: 50%; top: 40%; transform: translate(-50%, -50%); border-radius: 25px; background-color: transparent; border: 2px solid white; color: white; padding: 10px 15px;  }
       .button-white{font-family: Circular Std Book; margin: 0 auto; border-radius: 25px; border: 2px solid white; color: white; background-color: transparent; padding: 15px;}
@@ -146,7 +146,7 @@
       .rowdirection{flex-direction: row; display: flex;}
       header{border-bottom: 1px solid #eee; position: fixed; background-color: white; right: 0; left: 0; z-index: 111;}
       .header-logo{margin-left: 15px;}
-      .hamburger{display: inline-block; float: right; padding: 15px;}
+      .hamburger{display: inline-block; float: right; padding: 23px;}
       .genesis-accordian{margin: 0 -15px; background-color: white; }
       .genesis-accordian > section {background-color: white; }
       .genesis-accordian > section > h4 {background-color: white; color: #333; font-family: Circular Std Book; padding: 14px; border-top: 1px solid #eee; border-bottom: 0}
@@ -162,16 +162,17 @@
       .circular-icon-background{ margin: 0 auto;background-color: #F58025;border-radius: 50%;width: fit-content;padding: 8px 10px;}
       .genesis-button-original{font-family: Circular Std Medium; font-size: 14px;padding: 15px 60px; background-color: #f58025; color: white; text-align: center; border-radius: 25px; border: 0; margin: 0 auto;}
       .align-logo {position: relative; top: 10px;}
-      .header-myaccount{float:right; color: #F58025; border: none; background-color: transparent; padding: 17px 10px; font-size: 14px; font-family: Circular Std Medium;}
+      .header-myaccount{float:right; color: #F58025; border: none; background-color: transparent; padding: 25px 10px; font-size: 16px; font-family: Circular Std Medium;}
       .join-genesis-section{text-align:center; padding: 0 15px;}
       .h2-amp-text{font-family: Circular Std Bold; font-size: 32px; color: #464958;}
       .join-genesis-section > a > button {margin-bottom: 20px;}
       .mini-menu-p {font-family: Circular Std Medium; font-size: 16px; margin: 0; padding: 20px 5px;}
-      .mini-menu-items > a {color: #333;}
-      .mini-menu-amp {background-image: url('images/wavy-background.png'); background-size: contain; background-repeat: no-repeat; background-position-y: bottom;}
+      .mini-menu-items > a {color: #333; display: flex; padding: 15px; align-items: center;}
+      .mini-menu-items > a > p {padding: 0px 15px;}
+      .mini-menu-amp {margin-bottom: 15px; background-image: url('images/wavy-background.png'); background-size: contain; background-repeat: no-repeat; background-position-y: bottom;}
       .withyouforyou{margin: 0 20px 20px 20px; background-color: #f7f7f7; text-align: center;}
       .withyouforyou > h2 {font-family: Circular Std Bold; color: #F58025;}
-      .withyouforyou > p {font-family: Circular Std Book;}
+      .withyouforyou > p {font-family: Circular Std Book; padding: 0 15px;}
       .withyouforyou > a > button {margin-bottom: 20px;}
     </style>
   </head>
@@ -182,8 +183,8 @@
       </div>
       
       <amp-img class="header-logo"
-        width="60"
-        height="50"
+        width="80"
+        height="65"
         src="images/logo.png">
       </amp-img>
       <a href="https://myaccount.genesisenergy.co.nz/login">
@@ -215,7 +216,7 @@
             <a href="#moving-house" id="moving-house">
               <amp-img
                 src="images/residentual.png"
-                width="30"
+                width="25"
                 height="25">
               </amp-img>
             </a> 
@@ -246,30 +247,50 @@
         <div class="mini-menu-items">
           <a href="https://myaccount.genesisenergy.co.nz/login">
             <amp-img
-              src="images/sign-up.svg"
-              width="25"
-              height="25">
+              src="images/login.svg"
+              width="30"
+              height="30">
             </amp-img>
             <p class="mini-menu-p">Energy IQ Login</p>
           </a>
         </div>
         <div class="mini-menu-items">
           <a href="https://uat.genesisenergy.co.nz/moving-house">
+            <amp-img
+              src="images/organize-my-move.svg"
+              width="30"
+              height="30">
+            </amp-img>
             <p class="mini-menu-p">Moving House</p>
           </a>
         </div>
         <div class="mini-menu-items">
-          <a href="https://uat.genesisenergy.co.nz/plans-and-pricing">          
+          <a href="https://uat.genesisenergy.co.nz/plans-and-pricing"> 
+            <amp-img
+              src="images/compare-plans.svg"
+              width="30"
+              height="30">
+            </amp-img>         
             <p class="mini-menu-p">Compare Plans</p>
           </a>
         </div>
         <div class="mini-menu-items">
-          <a href="https://signup.genesisenergy.co.nz/winter-offers/?offer=dual">          
+          <a href="https://signup.genesisenergy.co.nz/winter-offers/?offer=dual">      
+            <amp-img
+              src="images/sign-up.svg"
+              width="30"
+              height="30">
+            </amp-img>    
             <p class="mini-menu-p">Join us</p>
           </a>
         </div>
         <div class="mini-menu-items">
-          <a href="https://genesisenergyhub.co.nz/">                    
+          <a href="https://genesisenergyhub.co.nz/">   
+            <amp-img
+              src="images/energy hub icon.svg"
+              width="30"
+              height="30">
+            </amp-img>                 
             <p class="mini-menu-p">Energyhub</p>
           </a>
         </div>
